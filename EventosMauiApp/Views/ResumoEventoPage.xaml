@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="EventosMauiApp.Views.ResumoEventoPage">
+
+
+    <StackLayout Padding="20" Spacing="15"
+                 BackgroundColor="azure">
+        
+        <Label Text="Resumo do Evento" TextColor="DarkBlue" FontAttributes="Bold" FontSize="Header" HorizontalOptions="Center" />
+            
+        <Label Text="Nome do Evento:" FontAttributes="Bold" />
+        <Label Text="{Binding Nome}" TextColor="DarkBlue" />
+
+        <Label Text="Data de Início:" FontAttributes="Bold" />
+        <Label Text="{Binding DataInicio, StringFormat='{0:dd/MM/yyyy}'}" TextColor="DarkBlue"/>
+       
+
+        <Label Text="Data de Término:" FontAttributes="Bold" />
+        <Label Text="{Binding DataTermino, StringFormat='{0:dd/MM/yyyy}'}" TextColor="DarkBlue"/>
+       
+
+        <Label Text="Duração do Evento (em dias):" FontAttributes="Bold" />
+        <Label Text="{Binding DuracaoDias}" TextColor="DarkBlue"/>
+
+        <Label Text="Número de Participantes:" FontAttributes="Bold" />
+        <Label Text="{Binding NumeroParticipantes}" TextColor="DarkBlue" />
+
+        <Label Text="Local do Evento:" FontAttributes="Bold" />
+        <Label Text="{Binding Local}" TextColor="DarkBlue"/>
+
+        <Label Text="Custo por Participante:" FontAttributes="Bold" />
+        <Label Text="{Binding CustoPorParticipante, StringFormat='R$ {0:F2}'}" TextColor="DarkBlue" />
+
+        <Label Text="Custo Total:" FontAttributes="Bold" />
+        <Label Text="{Binding CustoTotal, StringFormat='R$ {0:F2}'}" TextColor="DarkBlue"/>
+    </StackLayout>
+</ContentPage>
